@@ -200,17 +200,17 @@ public class Methods {
 	 */
 	public static void example6(String phrase) {
 		//   
-		boolean palindrome = true;
+		boolean isPalindrome = true;
 		for (int beginIdx = 0, endIdx = phrase.length()-1; 
 				beginIdx < phrase.length()/2 
 				;beginIdx++, endIdx--) {
 			if (phrase.charAt(beginIdx) != phrase.charAt(endIdx)) {
-				palindrome = false;
+				isPalindrome = false;
 				break;
 			}
 		}
 		// String not = palindrome ? "" : "not";
-		System.out.println (phrase + " is " + (palindrome ? "" : "not ") + "a palindrome.");
+		System.out.println (phrase + " is " + (isPalindrome ? "" : "not ") + "a palindrome.");
 	}
 
 	/****************************************************/ 

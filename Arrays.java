@@ -205,6 +205,7 @@ public class Arrays
 		}
 	}
 	
+	// add two smaller arrays into a larger one
 	static void example6() {
 		String[] arr = new String[3];
 		String word1 = "word1";
@@ -222,7 +223,7 @@ public class Arrays
 		newArr[1] = word5;
 		newArr[2] = word6;
 		
-		String[] bigArr = new String[arr.length + 3];
+		String[] bigArr = new String[arr.length + newArr.length];
 	
 		// load the bigArr with the values from arr
 		int count=0; // keeps track of the the last element inserted into the bigArr.  
@@ -240,7 +241,7 @@ public class Arrays
 		}
 		
 		for (int idx = 0; idx < bigArr.length; idx++) {
-			System.out.println (bigArr[idx]);
+			System.out.println ("bigArr[" + idx + "] " +bigArr[idx]);
 		}
 	}
 	
