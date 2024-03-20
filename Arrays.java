@@ -170,7 +170,7 @@ public class Arrays
 			System.out.println ();
 		}
 
-		System.out.println("Last element of first array : " + arr[2][arr[0].length - 1]);
+		//System.out.println("Last element of first array : " + arr[2][arr[0].length - 1]);
 		
 	}
 	
@@ -205,7 +205,7 @@ public class Arrays
 		}
 	}
 	
-	// add two smaller arrays into a larger one
+	// add two smaller arrays 
 	static void example6() {
 		String[] arr = new String[3];
 		String word1 = "word1";
@@ -241,7 +241,7 @@ public class Arrays
 		}
 		
 		for (int idx = 0; idx < bigArr.length; idx++) {
-			System.out.println ("bigArr[" + idx + "] " +bigArr[idx]);
+			System.out.println (bigArr[idx]);
 		}
 	}
 	
