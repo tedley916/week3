@@ -137,7 +137,7 @@ public class Arrays
 	}
 	
 	
-	// example 4
+	// example 4 OPTIONAL quiz question
 	static void example4() {
 		// error checking for input.
 		System.out.println ("Enter two integers greater that 2");
