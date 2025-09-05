@@ -13,8 +13,6 @@ public class Methods {
 		}
 		
 		
-		final String example1 = "example1";
-		
 		final String clArg = args[0];
 		switch (clArg) {
 		case "example1" :   
@@ -45,14 +43,14 @@ public class Methods {
 	
 	public static void example1() {
 		int sum1 = returnSum1(33,33,33);
-		System.out.println (sum1);
+		System.out.println ("1. " + sum1);
 
 		int[] justNums = new int[] {10, 20, 30};
 		int sum2 = returnSum2(justNums);
-		System.out.println (sum2);
+		System.out.println ("2. " + sum2);
 		
 		int sum3 = returnSum3 (1,2,3,202, 4, 9, 2022);
-		System.out.println (sum3);
+		System.out.println ("3. " + sum3);
 	}
 
 	public static int returnSum1(int num1, int num2, int num3 ) {
@@ -67,11 +65,9 @@ public class Methods {
 		return sumNum;
 	}
 	
-	// public static int returnSome(int[] nums)	
 	public static int returnSum3(int... nums)
 	{
 		System.out.println ("nums length = " + nums.length);
-		// int idx = nums[44];
 		int sum = 0;
 		for (int num : nums ) {
 			sum += num;
@@ -95,7 +91,7 @@ public class Methods {
 			buzz = true;
 			System.out.print(BUZZ);
 		}
-		if (!fuzz && !buzz) {
+		if (!fuzz && !buzz && (number % 2 != 0)) {
 			System.out.println ("Hmaybe a prime, maybe...");
 		}
 	}
@@ -124,21 +120,21 @@ public class Methods {
 	 */
 	public static boolean passwordChecker(String password) {
 		boolean pwLen = false, pwChars = false;
-		for (int idx = 0; idx < password.length(); idx++) {
-			if (password.charAt(idx) == '!' ||
-				password.charAt(idx) == '$' ||
-				password.charAt(idx) == '&' ||
-				password.charAt(idx) == '%') {
-					pwChars = true;
-					break;
-			}
-		}  // for
-//		if (password.contains("!") ||
-//			password.contains("$") ||
-//			password.contains("&") ||
-//			password.contains("%"))	{
-//				pwChars = true;
-//		}
+//		for (int idx = 0; idx < password.length(); idx++) {
+//			if (password.charAt(idx) == '!' ||
+//				password.charAt(idx) == '$' ||
+//				password.charAt(idx) == '&' ||
+//				password.charAt(idx) == '%') {
+//					pwChars = true;
+//					break;
+//			}
+//		}  // for
+		if (password.contains("!") ||
+			password.contains("$") ||
+			password.contains("&") ||
+			password.contains("%"))	{
+				pwChars = true;
+		}
 		if (password.length() >= 8) {
 			pwLen = true;
 		}
@@ -178,7 +174,7 @@ public class Methods {
 	
 	
 	public static void example5() {
-		int[] intArrayN = createArrayN(-1, 44, 10, 4, 5, 1023);
+		int[] intArrayN = createArrayN(-1, 44, 10, 4, 5, 1023);  // cannot pass an array, must be individual elements
 		for (int idx = 0; idx < intArrayN.length; idx++) {
 			System.out.println (intArrayN[idx]);	
 		}

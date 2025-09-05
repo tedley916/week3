@@ -22,7 +22,8 @@ public class Arrays
 			 // int[] arrayOfInts = new int[6];  
 			 // int[] arrayOfInts = new int[] {4,5,3,10,2,6,7,8};
 			 // (arrayOfInts);
-		
+	
+			
 			System.out.println ( "smallest array element: " + example3a( new int[] {4,5,3,10,2,6,1,8}));
 			System.out.println ( "smallest array element: " + example3b( new int[] {4,5,3,10,2,6,1,8}));
 			break;
@@ -63,11 +64,16 @@ public class Arrays
 		
 		String[] colors1 = { "Red", "Green", "Yellow", "blue" };
 		
-		/// switch these
+		// switch these
+		// String[] colors2 = colors1.clone();    // deep copy
 		String[] colors2 = colors1;              // shallow copy
-		//String[] colors2 = colors1.clone();    // deep copy
 		
-		colors2[2] = "black";
+		// re-assign colors2 array
+		colors2[0] = "crimson";
+		colors2[1] = "jade";
+		colors2[2] = "amber";
+		colors2[3] = "azure";
+				
 		System.out.println ("ojects are equal : " + (colors1 == colors2));
 	
 		for (int x = 0; x < colors2.length; x++)
@@ -157,13 +163,14 @@ public class Arrays
 		int[][] arr = new int[dimX][dimY];
 		for (x = 0; x < dimX; x++) {
 			for (y = 0; y < dimY; y++) {
-//				arr [x][y] = y;
-				arr [x][y] = y + (x * 10);
+				arr [x][y] = y;
+//				arr [x][y] = y + (x * 10);
 			}
 		}
 		// print the array
 		System.out.println (dimX + " arrays of " + dimY + " elements each");
 		for (x = 0; x < dimX; x++) {
+			System.out.print(x+1 + ". ");
 			for (y = 0; y < dimY; y++) {
 				System.out.print ( arr[x][y] + " " );
 			}
@@ -233,13 +240,13 @@ public class Arrays
 			System.out.println ("count = " + count);
 			count++;
 		}
-		
+		System.out.println ("---");
 		// load the bigArr with values from the newArr
 		for (int x = 0; x < newArr.length; x++) {
 			System.out.println ("count = " + count);
 			bigArr[count++] = newArr[x];
 		}
-		
+		System.out.println ("---");
 		for (int idx = 0; idx < bigArr.length; idx++) {
 			System.out.println (bigArr[idx]);
 		}

@@ -1,0 +1,139 @@
+		
+		Java 3 - Methods Part 1
+		
+#5
+		
+		final String FIZZ = "Fizz";  
+		final String BUZZ = "Buzz";
+		boolean fizz = false, buzz = false;
+		if (num1 % 3 == 0) {
+			fizz = true;
+		}
+		if (num1 % 5 == 0 ) {
+			buzz = true;
+		}
+		
+		if ( (fizz == true) && (buzz == true )) {
+		    System.out.println (FIZZ + BUZZ);
+		}
+        else if (fizz == true) {
+            System.out.println (FIZZ);
+        }
+        else if (buzz == true) {
+            System.out.println (BUZZ);
+        }
+        else  {
+            System.out.println ("Hello world!");
+        }
+        
+ 
+        Java 3 - Methods Part 2
+ 
+ #13
+        
+        	String strNum = String.valueOf(digits);
+	        int sum = 0;	        
+	        for(int x = 0; x < strNum.length(); x++) {
+	            char tempChar = strNum.charAt(x);
+	            sum += Integer.parseInt(String.valueOf(tempChar));
+	        }
+	        return sum;
+	        
+	        
+#15
+
+		boolean pwLen = false, pwChars = false;
+
+		for (int idx = 0; idx < password.length(); idx++) {
+			if (password.charAt(idx) == '!' ||
+				password.charAt(idx) == '$' ||
+				password.charAt(idx) == '&' ||
+				password.charAt(idx) == '%') {
+					pwChars = true;
+					break;
+			}
+		}  // for
+		if (password.length() >= 8) {
+			pwLen = true;
+		}
+		return pwLen && pwChars;
+			        
+	        
+	        
+	        
+	    java 3 - Arrays Part 2
+#15
+
+		String[] newArr = new String[3];
+		newArr[0] = word1;
+		newArr[1] = word2;
+		newArr[2] = word3;
+		
+		String[] bigArr = new String[arr.length + newArr.length];
+	
+		// load the bigArr with the values from arr
+		int count=0; // keeps track of the the last element inserted into the bigArr.  
+		for (int idx = 0; idx < arr.length; idx++)
+		{
+			bigArr[idx] = arr[idx];
+			count++;
+		}
+		// load the bigArr with values from the newArr
+		for (int x = 0; x < newArr.length; x++) {
+			bigArr[count++] = newArr[x];
+		}
+		
+		for (int idx = 0; idx < bigArr.length; idx++) {
+			System.out.println (bigArr[idx]);
+		}
+		
+#19
+
+	    // Check for error -- invalid parameters with an if/else
+	    if (a < 3 || b < 3) {
+	        System.out.println ("Both numbers need to be greater than 2.");
+	    } else {
+	
+		    // If both parameters are > 2
+		    // Declare a multidimensional array something like this:
+		    //          int[][] arr = new int[param1][param2];
+    	int[][] arr = new int[a][b];
+		    
+		    
+		
+		    // Create two loops to populate your new multidimensional array
+		    // Note:  you will need a new index in each for-loop. 
+		    //          one index will be used for the first for-loop's index (0 to param1 - 1)
+		    //          the second index will be used for the second for-loop's index (0 to param2 - 1)		
+		  
+		int x, y;
+	
+		for (x = 0; x < a; x++) {
+			for (y = 0; y < b; y++) {
+				arr [x][y] = y;
+			}
+		}
+		  
+		    // After you have populated your multidimensional array, 
+		    // Print out the value of arr[firstPosition][lastPosition]
+		 System.out.println (arr[0][b-1]);   
+		 }
+		 
+		
+#17
+
+		int[] newArr = new int[arr.length];
+		
+//      for (int inc = 0, dec = arr.length-1; inc < arr.length; inc++, dec-- ) {   
+		for (int inc = 0, dec = arr.length-1; dec >= 0 ; inc++, dec--) {
+			newArr[dec] = arr[inc];
+		}	
+		
+		for (int x = 0; x < arr.length; x++) {
+		    System.out.println (arr[x]);
+		}
+		for (int x = 0; x < arr.length; x++) {
+		    System.out.println (newArr[x]);
+		}		 
+		
+		

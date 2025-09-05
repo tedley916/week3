@@ -29,7 +29,8 @@ public class Equalities {
 	
 	
 	static void example1() {	
-//		String immutability
+		//	String immutability
+		System.out.println ("example1");
 		String fruit = "banana";
 		System.out.println (fruit); 
 		
@@ -49,6 +50,7 @@ public class Equalities {
 	
 	
 	static void example2() {	
+		System.out.println ("example2");
 		System.out.println ("0. primitive data type initialization");
 		double apple = 3.1415;
 		double pi = 3.1415;
@@ -60,14 +62,18 @@ public class Equalities {
 		System.out.println ("a. contents the same: " + car1.equals(car2));  // both are Ford Mustangs
 		System.out.println ("b. objects the same: " + (car1 == car2));  // VIN numbers are different
 		
+		// STRNG POOL SLIDES
+		
 		System.out.println ("\n2. Memory effecient string creation behaves differently (string pool)"); 
 		String big = "bigMac";
 		String mac = "bigMac";
 		System.out.println ("a. contents the same: " + big.equals(mac));
-		System.out.println ("b. objects the same: " + (big == mac));   // why???  SEE SLIDE
+		System.out.println ("b. objects the same: " + (big == mac));   // why???  SEE String pool slide
+		
 	}
 	
 	static void example3() {
+		System.out.println ("example3");
         String foo = "foobar";
         String bar = "foobar";
 

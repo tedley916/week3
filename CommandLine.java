@@ -28,3 +28,6 @@ public class CommandLine
 	
 } // END class
 
+// PATH: 
+// /Volumes/USB1/work/projects/test-play/Weekly/src/com/weekly/week3
+// /users/tedstandley/Documents/work/projects/test-play/Weekly/src/com/weekly/week3
